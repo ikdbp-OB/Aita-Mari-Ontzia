@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario - Aita Maria Ontzia</title>
+    <link rel="stylesheet" href="/css/Diseño.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navegacion">
+        <div class="menu_bar">
+            <a href="#" class="menu"><span class=""></span><img src="/imagenes/menu.png" alt="menu" width="20px"></a>
+        </div>
+            <a href="index.html" id="logo-link">
+            <img src="/imagenes/logo.png" alt="Logo" id="logo">
+            </a>
+        <div class="enlaces">
+            <ul>
+                <a href="index.html">Inicio</a>
+                <a href="Nosotros.html">¿Quiénes somos?</a>
+                <a href="Rutas.html">Rutas</a>
+                <a href="Donaciones.html">Donaciones</a>
+                <a href="Contactos.html">Contactos</a>
+                <a href="login.html">Iniciar sesión</a>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1>Cuestionario</h1>
+        <form id="contactForm">
+            <label for="name">Nombre:<span style="color:red">*</span></label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Correo Electrónico:<span style="color:red">*</span></label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" maxlength="400"></textarea><br><br>
+
+            <input type="submit" value="Enviar" class="nav-button">
+        </form>
+
+    </main>
+    <footer>
+        <hr>
+        <div class="footer-center">
+            <h3>Redes sociales</h3>
+            <table>
+                <tr>
+                    <th>
+                        <a href="https://www.instagram.com/maydayterraneo">
+                            <br><img src="/imagenes/Instagram.png" alt="Instagram" width="30" style="cursor: pointer;">
+                        </a>
+                    </th>
+                    <th>
+                        <a href="https://www.facebook.com/maydayterraneo">
+                            <br><img src="/imagenes/Facebook.png" alt="Facebook" width="30" style="cursor: pointer;">
+                        </a>
+                    </th>
+                    <th>
+                        <a href="https://x.com/maydayterraneo">
+                            <br><img src="/imagenes/X.png" alt="X" width="30" style="cursor: pointer;">
+                        </a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </footer>
+<script src="/JS/mensajeCamposVacios.js"></script>
+</body>
+</html>

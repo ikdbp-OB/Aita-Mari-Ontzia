@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: white;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1, h2, h3, h4, p, ul, form {
+    margin: 15px 0;
+}
+
+h1 { color: #379EFF; }
+
+#navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #6ab7ff;
+    padding: 0 50px;
+    height: 80px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.menu_bar {
+    display:none;
+
+}
+
+#logo {
+    width: 145px;
+    cursor: pointer;
+}
+
+#navegacion .enlaces {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#navegacion .enlaces a,
+#navegacion .login {
+    background: white;
+    color: #004d7a;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: solid 1.2px #3b3b3b;
+}
+
+#navegacion .enlaces a:hover,
+#navegacion .login:hover {
+    background: #379EFF;
+    color: white;
+    box-shadow: 0 4px 12px #0056b3;
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.login-form {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-form label {
+    font-weight: bold;
+    color: #379EFF;
+    text-align: left;
+}
+
+.login-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.login-form button {
+    background: #379EFF;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+    background: #0056b3;
+}
+
+.olvidado_contra {
+    color: #379EFF;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+.olvidado_contra:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(to bottom, #6ab7ff, #6ab7ff); 
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    margin: 0 auto 30px;
+    max-width: 80%;
+}
+
+.footer-center {
+    text-align: center;
+    padding: 20px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-center h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-center table {
+    display: inline-table;
+    border-spacing: 30px 0; /* More space between icons */
+}
+
+.footer-center img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: brightness(100); /* Makes icons pop on dark background */
+}
+
+.footer-center img:hover {
+    transform: scale(1.2);
+}
+
+form {
+    max-width: 500px;
+    margin: 30px auto;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+    color: #379EFF;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #379EFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.nav-button,
+.cuestionario_button {
+    background: #379EFF;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px auto;
+    display: inline-block;
+    text-decoration: none;
+    border: 2.2px solid #585858;
+    border-radius: 24px;
+}
+
+.nav-button:hover {
+      background: #0056b3;
+}
+
+.cuestionario_button:hover {
+  background-color: #FFB26A;
+  color: white;
+}
+
+.image-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rescate-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+}
+
+
+.somosimg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  margin: 50px auto;
+}
+
+
+.somosimg img {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, z-index 0s, box-shadow 0.3s ease;
+  display: block;
+}
+
+
+.somosimg img:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1024px) {
+  .somosimg {
+    gap: 25px;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .somosimg {
+    gap: 15px;
+    margin: 20px auto;
+  }
+
+  .somosimg img {
+    max-width: 90%;
+  }
+}
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .donation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.donacionSubTitulo {
+    background-color: #379EFF;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;        
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(55, 158, 255, 0.25); 
+    margin: 20px 0 15px 0;
+    font-size: 1.4rem;
+}
+
+.donacionSubTitulo2 {            
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    text-decoration: underline;
+}
+
+.methods-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+
+.methods-list li {
+    margin-bottom: 28px;
+    padding: 20px;
+    background: #f0f8ff;             
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-size: 1.15rem;
+    line-height: 1.55;
+    margin-left: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.methods-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(55, 158, 255, 0.25);
+}
+
+.impact-list {
+    list-style: none;
+    padding-right: 20px;
+    margin: 30px 0;
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    background: #f0f8ff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.impact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(55, 158, 255, 0.25);
+}
+
+.impact-icon {
+    flex-shrink: 0;
+    margin-right: 28px;
+}
+
+.impact-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 12px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.impact-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.amount {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #379EFF;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.donation-link {
+    color: #379EFF;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #379EFF;
+    transition: all 0.3s ease;
+}
+
+.donation-link:hover {
+    color: #FFB26A;
+    border-bottom-color: #FFB26A;
+}
+
+/* Animación flotante suave para los iconos */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .donacionSubTitulo {
+        font-size: 1.3rem;
+        padding: 10px 24px;
+    }
+
+    .impact-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .impact-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .impact-icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .impact-text {
+        font-size: 1.15rem;
+    }
+
+    .amount {
+        font-size: 2rem;
+    }
+
+    .methods-list li {
+        padding: 16px;
+        font-size: 1.05rem;
+    }
+}
+
+/*Donacion Pagina Fin*/
+
+#message {
+    width: 450px;
+    height: 150px;
+    resize: none;
+  }
+
+@media (max-width: 900px) {
+    #navegacion {
+        padding: 0 10px;
+        height: 55px;
+        gap: 5px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    nav .enlaces {
+  		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+    }
+
+    nav .enlaces ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+
+    .menu_bar menu{
+        display:block;
+        padding: 20px;
+        background-color: #379EFF;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .menu span {
+		float:right;
+		font-size:40px;
+    }
+
+    #logo {
+        width: 70px;
+    }
+
+    #navegacion .enlaces {
+        gap: 4px;
+        flex-shrink: 0;
+        display: block;
+        float: none;
+    }
+
+    #navegacion .login {
+        padding: 5px 8px;
+        font-size: 11px;
+        min-width: 50px;
+        font-weight: 500;
+        white-space: nowrap;
+        border-radius: 20px;
+    }
+}
