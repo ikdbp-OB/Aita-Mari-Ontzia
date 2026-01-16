@@ -9,32 +9,41 @@
 </head>
 <body>
     <nav id="navegacion">
-        <div class="menu_bar">
-            <a href="#" class="menu"><span class=""></span><img src="/imagenes/menu.png" alt="menu" width="20px"></a>
-        </div>
-            <a href="index.html" id="logo-link">
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <a href="index.html" id="logo-link">
             <img src="/imagenes/logo.png" alt="Logo" id="logo">
-            </a>
+        </a>
+
         <div class="enlaces">
-            <ul>
-                <a href="index.html">Inicio</a>
-                <a href="Nosotros.html">¿Quiénes somos?</a>
-                <a href="Rutas.html">Rutas</a>
-                <a href="Donaciones.html">Donaciones</a>
-                <a href="Contactos.html">Contactos</a>
-                <a href="login.html">Iniciar sesión</a>
-            </ul>
+            <a href="index.html">Inicio</a>
+            <a href="Nosotros.html">¿Quiénes somos?</a>
+            <a href="Rutas.html">Rutas</a>
+            <a href="Donaciones.html">Donaciones</a>
+            <a href="Contactos.html">Contactos</a>
+            <a href="login.html" class="mobile-login">Iniciar sesión</a>
         </div>
+        <a href="login.html" class="login desktop-login">Iniciar sesión</a>
     </nav>
     <header>
         <h1>¿Quiénes somos?</h1>
     </header>
     <main>
         <article>
-            <h2>- Nuestra Misión -</h2>
-            <h3>Somos un equipo de rescate marítimo en el Mediterráneo, creado en 2017 como respuesta a la crisis migratoria europea. Nacimos de la mano de Salvamento Marítimo Humanitario (SMH), con la misión de proteger la vida y la dignidad de quienes se ven obligados a cruzar el mar en condiciones extremas.</h3>
-            <p>Desde entonces, el barco Aita Mari ha participado en múltiples operaciones, rescatando a personas en peligro y ofreciendo atención médica inmediata gracias al esfuerzo de voluntarios y profesionales a bordo. Desde entonces, nuestro compromiso es claro: ninguna vida debería perderse en el mar por falta de ayuda.</p>
-            <p>Además del rescate, trabajamos para crear conciencia y fomentar la solidaridad. Invitamos a la sociedad a unirse como voluntarios o socios, porque cada aportación mantiene viva esta misión.</p>
+            <div class="NMision">
+                <h2>- Nuestra Misión -</h2>
+                <h3>Somos un equipo de rescate marítimo en el Mediterráneo, creado en 2017 como respuesta a la crisis migratoria europea. Nacimos de la mano de Salvamento Marítimo Humanitario (SMH)</h3>
+                <p>con la misión de proteger la vida y la dignidad de quienes se ven obligados a cruzar el mar en condiciones extremas.</p>
+                <p>Desde entonces, el barco Aita Mari ha participado en múltiples operaciones, rescatando a personas en peligro y ofreciendo atención médica inmediata gracias al esfuerzo de voluntarios y profesionales a bordo.</p>
+                <p>Desde entonces, nuestro compromiso es claro: ninguna vida debería perderse en el mar por falta de ayuda.</p>
+                <p>Además del rescate, trabajamos para crear conciencia y fomentar la solidaridad. Invitamos a la sociedad a unirse como voluntarios o socios, porque cada aportación mantiene viva esta misión.</p>
+            </div>
         </article>
         <div class="somosimg">
             <img class="somos1" src="/imagenes/somos1.jpg" alt="Rescate">

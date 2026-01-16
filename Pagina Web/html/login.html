@@ -9,22 +9,27 @@
 </head>
 <body>
     <nav id="navegacion">
-        <div class="menu_bar">
-            <a href="#" class="menu"><span class=""></span><img src="/imagenes/menu.png" alt="menu" width="20px"></a>
-        </div>
-            <a href="index.html" id="logo-link">
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <a href="index.html" id="logo-link">
             <img src="/imagenes/logo.png" alt="Logo" id="logo">
-            </a>
+        </a>
+
         <div class="enlaces">
-            <ul>
-                <a href="index.html">Inicio</a>
-                <a href="Nosotros.html">¿Quiénes somos?</a>
-                <a href="Rutas.html">Rutas</a>
-                <a href="Donaciones.html">Donaciones</a>
-                <a href="Contactos.html">Contactos</a>
-                <a href="login.html">Iniciar sesión</a>
-            </ul>
+            <a href="index.html">Inicio</a>
+            <a href="Nosotros.html">¿Quiénes somos?</a>
+            <a href="Rutas.html">Rutas</a>
+            <a href="Donaciones.html">Donaciones</a>
+            <a href="Contactos.html">Contactos</a>
+            <a href="login.html" class="mobile-login">Iniciar sesión</a>
         </div>
+        <a href="login.html" class="login desktop-login">Iniciar sesión</a>
     </nav>
     <header>
         <h1>Iniciar Sesión</h1>
@@ -33,14 +38,16 @@
     <main>
         <div class="login-section">
             <form id="loginForm" class="login-form" action="#" method="post">
-                <label for="usuario">Usuario<span style="color:red">*</span></label>
+                <label for="usuario">Usuario <span style="color:red">*</span></label>
                 <input type="text" id="name" name="usuario">
 
-                <label for="clave">Contraseña<span style="color:red">*</span></label>
+                <label for="clave">Contraseña <span style="color:red">*</span></label>
                 <input type="password" id="password" name="clave">
 
                 <button type="submit">Entrar</button>
-                <a class="olvidado_contra" href="">Has olvidado la contraseña</a>
+                <a class="olvidado_contra" href="" style="text-decoration: none;">¿Has olvidado la contraseña?</a>
+                <p>¿No tienes una cuenta? <a class="olvidado_contra" href="" style="text-decoration: none;">Regístrate</a></p>
+                
             </form>
 
         </div>

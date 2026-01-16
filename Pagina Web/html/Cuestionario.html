@@ -9,39 +9,155 @@
 </head>
 <body>
     <nav id="navegacion">
-        <div class="menu_bar">
-            <a href="#" class="menu"><span class=""></span><img src="/imagenes/menu.png" alt="menu" width="20px"></a>
-        </div>
-            <a href="index.html" id="logo-link">
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <a href="index.html" id="logo-link">
             <img src="/imagenes/logo.png" alt="Logo" id="logo">
-            </a>
+        </a>
+
         <div class="enlaces">
-            <ul>
-                <a href="index.html">Inicio</a>
-                <a href="Nosotros.html">¿Quiénes somos?</a>
-                <a href="Rutas.html">Rutas</a>
-                <a href="Donaciones.html">Donaciones</a>
-                <a href="Contactos.html">Contactos</a>
-                <a href="login.html">Iniciar sesión</a>
-            </ul>
+            <a href="index.html">Inicio</a>
+            <a href="Nosotros.html">¿Quiénes somos?</a>
+            <a href="Rutas.html">Rutas</a>
+            <a href="Donaciones.html">Donaciones</a>
+            <a href="Contactos.html">Contactos</a>
+            <a href="login.html" class="mobile-login">Iniciar sesión</a>
         </div>
+        <a href="login.html" class="login desktop-login">Iniciar sesión</a>
     </nav>
-    <main>
-        <h1>Cuestionario</h1>
-        <form id="contactForm">
-            <label for="name">Nombre:<span style="color:red">*</span></label><br>
-            <input type="text" id="name" name="name"><br><br>
+    <main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            
+            <div class="text-center mb-4">
+                <h1 class="fw-bold text-primary">Voluntariado - Aita Mari</h1>
+                <p class="text-muted">Únete a nuestra tripulación. Por favor, completa este formulario con tus capacidades técnicas y disponibilidad.</p>
+            </div>
 
-            <label for="email">Correo Electrónico:<span style="color:red">*</span></label><br>
-            <input type="email" id="email" name="email"><br><br>
+            <form id="volunteerForm" class="p-4 shadow rounded bg-white border">
+                
+                <h4 class="mb-3 text-secondary">1. Datos Personales</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Nombre <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="surname" class="form-label">Apellidos <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="surname" name="surname" required>
+                    </div>
+                </div>
 
-            <label for="message">Mensaje:</label><br>
-            <textarea id="message" name="message" maxlength="400"></textarea><br><br>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Correo Electrónico <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="phone" class="form-label">Teléfono / WhatsApp <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+34 123456789" required>
+                    </div>
+                </div>
 
-            <input type="submit" value="Enviar" class="nav-button">
-        </form>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="dob" class="form-label">Fecha de Nacimiento <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="nationality" class="form-label">Nacionalidad <span class="text-danger" style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="nationality" name="nationality" required>
+                    </div>
+                </div>
 
-    </main>
+                <hr class="my-4">
+
+                <h4 class="mb-3 text-secondary">2. Perfil y Habilidades</h4>
+                
+                <div class="mb-3">
+                    <label for="role" class="form-label">¿A qué perfil aplicas? <span class="text-danger" style="color: red;">*</span></label>
+                    <select class="form-select" id="role" name="role" required>
+                        <option value="" selected disabled>Selecciona una opción...</option>
+                        <option value="medical">Equipo Médico (Médico/Enfermero)</option>
+                        <option value="rescue">Rescatador / Nadador (SAR)</option>
+                        <option value="deck">Marinería / Puente / Máquinas</option>
+                        <option value="logistics">Cocina / Logística</option>
+                        <option value="media">Periodismo / Documentación</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Certificaciones Marítimas (Si aplica) :</label>
+                    <div class="form-check">
+
+                        <label class="form-check-label" for="stcw">Formación Básica en Seguridad (STCW)</label>
+                        <input class="form-check-input" type="checkbox" id="stcw" name="certs" value="STCW">
+                    </div>
+                    <div class="form-check">
+
+                        <label class="form-check-label" for="per">Título de Patrón / Capitán</label>
+                        <input class="form-check-input" type="checkbox" id="per" name="certs" value="PER_Patron">
+                    </div>
+                    <div class="form-check">
+
+                        <label class="form-check-label" for="sanitario">Colegiado/a en Medicina o Enfermería</label>
+                        <input class="form-check-input" type="checkbox" id="sanitario" name="certs" value="Sanitario">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Idiomas (Marca los que hables fluido)</label>
+                    <div class="btn-group role="group aria-label="Languages">
+                        <input type="checkbox" class="btn-check" id="lang_en" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="lang_en">Inglés</label>
+
+                        <input type="checkbox" class="btn-check" id="lang_fr" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="lang_fr">Francés</label>
+
+                        <input type="checkbox" class="btn-check" id="lang_ar" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="lang_ar">Árabe</label>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h4 class="mb-3 text-secondary">3. Disponibilidad y Motivación</h4>
+
+                <div class="mb-3">
+                    <label for="availability" class="form-label">Disponibilidad (Fechas aproximadas)</label>
+                    <input type="text" class="form-control" id="availability" placeholder="Ej: Disponible todo Agosto y Septiembre">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Carta de Motivación / Experiencia Previa</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" maxlength="600" placeholder="Cuéntanos brevemente tu experiencia en mar o en voluntariado..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cv" class="form-label">Adjuntar CV (PDF)</label>
+                    <input class="form-control" type="file" id="cv" accept=".pdf">
+                </div>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="gdpr" required>
+                    <label class="form-check-label small" for="gdpr">Acepto la política de privacidad y el tratamiento de mis datos para procesos de selección de la ONG <span class="text-danger" style="color: red;">*</span>
+                    </label>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <a type="submit" class="btn btn-primary btn-lg fw-bold" style="border-radius: 25px; color: white; padding: 5.5px;">Enviar Solicitud</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</main>
     <footer>
         <hr>
         <div class="footer-center">
